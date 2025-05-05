@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Juan Mauricio">
+    <link rel="stylesheet" href="webstyle.css">
+    <title>Recruitment</title>
+</head>
+<body>
+        <header>
+            <nav>
+                <a href="index.html">Home</a> |
+                <a href="Roster.html">Roster</a> |
+                <a href="Schedule.html">Schedule</a>  |
+                <a href="Pictures.html">Pictures</a>  |
+                <a href="Recruitment.html">Recruitment</a>  
+            <nav>
+         </header>
+         <h1 class="center">Recruitment</h1>
+        <br/>
+        <br/>
+        <br/>
+     <form class="center">   
+        <table id="recruit">
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="first_name"></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="last_name"></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="text" name="phone_number"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" name="address"></td>
+            </tr>
+        </table class="center">
+        <br/>
+        <br/>
+        <h2>Class Year</h2>
+        <h3 id="result"></h3>
+        <input type="radio" name="year" value="freshman">
+        <label>Freshman</label>
+        <input type="radio" name="year" value="sophomore">
+        <label>Sophomore</label>
+        <input type="radio" name="year" value="junior">
+        <label>Junior</label>
+        <input type="radio" name="year" value="senior">
+        <label>Senior</label>
+        <br/>
+        <br/>
+        <h2>Position</h2>
+        <input type="checkbox" id="Recruit">
+        <label for="Outside Hitter">Outside Hitter</label>
+        <br/>
+        <input type="checkbox" id="Recruit">
+        <label for="Opposite Hitter">Opposite Hitter</label>
+        <br/>
+        <input type="checkbox" id="Recruit">
+        <label for="Setter">Setter</label>
+        <br/>
+        <input type="checkbox" id="Recruit">
+        <label for="Middle Blocker">Middle Blocker</label>
+        <br/>
+        <input type="checkbox" id="Recruit">
+        <label for="Libero">Libero</label>
+        <br/>
+        <input type="checkbox" id="Recruit">
+        <label for="Defensive Specialist">Defensive Specialist</label>
+        <br/>
+        <input type="checkbox" id="Recruit">
+        <label for="Serving Specialist">Serving Specialist</label>
+        <br/>
+        <br/>
+        <h2>Questions</h2>
+        <textarea>Write Questions Here</textarea>
+        <br/>
+        <br/>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button" onclick="checkYear()">Click for a cool surprize</button>
+    </form>    
+    
+
+    <script>
+        function checkYear(){
+            let years =document.getElementsByName('year');
+            let selectedYear = "";
+            
+            for (let i = 0; i < years.length; i++) {
+                if (years[i].checked) {
+                    selectedYear = years[i].value;
+            break;
+            }
+        }
+
+        if (selectedYear === "freshman") {
+            document,getElementById('result').innerText = "4 years till you take flight!";
+        } else if (selectedYear === "sophomore") {
+            document.getElementById('result').innerText = "3 years till you take flight!";
+        } else if (selectedYear === "junior") {
+            document.getElementById('result').innerText = "2 years till you take flight";
+        } else if (selectedYear === "senior") {
+            document.getElementById('result').innerText = "1 year till you take flight!";
+        } else {
+            document.getElementById('result').innerText = "Please select a Year."
+        }
+        }
+    </script>
+    <script src="Website.js"></script>
+
+        <footer>       
+            </div>
+            <a href="https://www.tiktok.com/login" target="_blank">
+                <img src="Media/Pictures/tiktok.png" id="tiktok">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="Media/Pictures/instagram.png" id="instagram">
+            </a>
+            <a href="https://www.twitch.tv/login" target="_blank">
+                <img src="Media/Pictures/twitch.png" id="twitch">
+            </a>
+        </footer>
+    </body>
+</html>
